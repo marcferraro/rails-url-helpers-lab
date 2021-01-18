@@ -3,6 +3,7 @@ require 'rails_helper'
 describe Student do
   before(:each) do
     @student = Student.create!(first_name: "Daenerys", last_name: "Targaryen")
+    binding.pry
   end
 
   it 'can be created' do
@@ -10,6 +11,7 @@ describe Student do
   end
 
   it 'has an active attribute that defaults to false' do
+    binding.pry
     expect(@student.active).to eq(false)
   end
 
